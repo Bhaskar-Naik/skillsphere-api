@@ -44,4 +44,8 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
+app.get('/status', (req, res) => {
+  res.status(200).json({ message: 'App is live' });
+});
+
 module.exports = app;
